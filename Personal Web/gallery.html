@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style type="text/css">
+        #images {
+            display: table;
+        }
+        img.pic {
+            display: inline;
+            width: 100px;
+            height: 75px;
+            padding: 5px;
+        }
+        #images figcaption {
+            padding: 0 0 10px 5px;
+        }
+        img.pic:hover {
+            width: 400px;
+            height: 300px;
+            transition: width 2s, height 2s;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header id="top_of_the_page">
+            <div id="logo_section">
+                <p id="logo">Laky Lak</p>
+            </div>
+            <nav id="menu_section">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About me</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="images">
+                <div class="picture_unit">
+                    <img src="images/photo1.jpg" alt="Photo 1" class="pic">
+                    <figcaption>Image 1</figcaption>
+                </div>
+                <div class="picture_unit">
+                    <img src="images/photo2.jpg" alt="Photo 2" class="pic">
+                    <figcaption>Image 2</figcaption>
+                </div>
+                <div class="picture_unit">
+                    <img src="images/photo3.jpg" alt="Photo 3" class="pic">
+                    <figcaption>Image 3</figcaption>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div id="footer_content">
+                <div id="copy">
+                    <p>&copy 2015 Lukas Kovalik</p>
+                </div>
+                <div id="footer_img" >
+                    <a id="fcb" href="https://www.facebook.com/lukas.kovalik.31">
+                        <img src="images/fcb.gif" alt="facebook">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

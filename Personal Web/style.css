@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+}
+#container {
+    width: 1000px;
+    margin: auto;
+}
+#top_of_the_page {
+    width: 100%;
+    height: 110px;
+    display: table;
+    background: #1D3C54;
+}
+#logo_section {
+    float: left;
+    max-width: 300px;
+}
+#logo {
+    font-family: 'Bangers', cursive;
+    color: #98B5CC;
+    font-size: 55px;
+    width: 200px;
+    float: left;
+    margin: 0;
+    padding: 25px 5px 10px 35px;
+}
+#menu_section {
+    max-width: 700px;
+    float: right;
+}
+#menu_section ul {
+    font-family: 'Squada One', cursive;
+    color: #98B5CC;
+    margin: 60px 25px 0 0;
+}
+#menu_section li {
+    display: inline;
+    float: left;
+    font-size: 25px;
+    padding: 10px 5px 0px 5px;
+}
+#menu_section li a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0 8px 10px 8px;
+}
+#menu_section li a:hover {
+    border-bottom: #C7DDEE solid 3px;
+    transition: all 0.3s ease 0s;
+    color: #C7DDEE;
+    transition: all 1s ease 0s;
+}
+main {
+    margin: 0;
+    padding: 50px;
+    box-sizing: border-box;
+    background: linear-gradient(#C7DDEE, white);
+    font-family: Arial;
+    min-height: 700px;
+    width: 100%;
+}
+main p {
+    margin: 0;
+}
+footer {
+    font-family: Arial;
+    width: 1000px;
+    height: 50px;
+    background: #98B5CC;
+}
+#footer_content {
+    display: table;
+    width: 100%;
+}
+#copy {
+    position: absolute;
+    left: 0px;
+    width: 50%;
+}
+#footer_img {
+    position: absolute;
+    right: 0px;
+    width: 50%;
+}
+#copy p {
+    float: right;
+    margin: 16px 15px;
+}
+footer img {
+    width: 32px;
+    float: left;
+    margin: 9px 15px;
+}
+/*Home*/
+#avatar {
+    float: left;
+}
+#avatar img {
+    width: 400px;
+}
+#welcome {
+    float: left;
+    padding: 250px 0px 150px 85px;
+}
+#welcome p {
+    font-family: 'Squada One', cursive;
+    font-size: 20px;
+    text-align: center;
+}
+/*About*/
+#bio #bio_header {
+    text-transform: uppercase;
+    text-align: center;
+    padding-right: 80px;
+}
+#bio th.bio_headers {
+    text-transform: uppercase;
+    padding: 20px 0 10px;
+}
+#bio table th {
+    padding: 5px 50px;
+}
+#bio table td {
+    padding: 5px 0px 5px 75px;
+}
+/*Skills*/
+#skill #skill_header {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 80px 50px 0px;
+}
+table .skill_headers {
+    text-transform: uppercase;
+    padding: 25px 25px 10px 25px;
+}
+#skill table th {
+    padding: 5px 50px;
+    width: 450px;
+}
+#skill table td {
+    padding: 5px 0px 5px 15px;
+    width: 500px;
+}
+/*Contacts*/
+#contacts {
+    display: inline-block;
+    position: absolute;
+    right: 50%;
+    width: 400px;
+}
+#contacts #contacts_header, #form_header {
+    text-transform: uppercase;
+    text-align: center;
+    padding-right: 50px;
+}
+#contacts th.c_headers {
+    text-transform: uppercase;
+    padding: 20px 0 10px;
+}
+#contacts table th {
+    padding: 5px 50px;
+}
+#contacts table td {
+    padding: 5px 0px 5px 45px;
+}
+#map {
+    width: 300px;
+    display: inline;
+    position: absolute;
+    left: 140px;
+    top: 400px;
+}
+#form {
+    position: absolute;
+    left: 50%;
+    width: 400px;
+    padding-left: 20px;
+    margin-left: 30px;
+}
+#form label {
+    display: inline-block;
+    padding: 10px 20px 0 0;
+    width: 110px;
+}
+#form input {
+    width: 150px;
+}
+#form #comments {
+    padding: 0 70px 5px 0;
+}
+#form textarea {
+    margin-bottom: 15px;
+}
