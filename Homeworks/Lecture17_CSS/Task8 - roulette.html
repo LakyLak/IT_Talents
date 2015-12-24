@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Roulette</title>
+    <style type="text/css">
+        #container {
+            width: 400px;
+            height: 400px;
+            background: url("images/roulette.PNG") no-repeat;
+        }
+        #rotate {
+            position: relative;
+            top: 170px;
+            left: 50px;
+            width: 240px;
+            height: 10px;
+
+            -webkit-animation-name: spin;
+            -webkit-animation-duration: 2000ms;
+            -webkit-animation-iteration-count: 3;
+            -webkit-animation-timing-function: linear;
+
+        }
+        @-webkit-keyframes spin {
+            from {
+                -webkit-transform:rotate(0deg);
+            }
+            to {
+                -webkit-transform:rotate(360deg);
+            }
+        }
+        #ball {
+            border-radius: 8px;
+            width: 16px;
+            height: 16px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="rotate">
+            <div id="ball"></div>
+        </div>
+    </div>
+</body>
+</html>
