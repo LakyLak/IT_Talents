@@ -1,0 +1,2 @@
+Tank can be moved with up, down, left and right arrow
+So far it doesn't do anything else.
