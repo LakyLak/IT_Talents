@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+
+    <div id="registration_form">
+        <form name="forma" action="">
+            <label for="fname">First name</label>
+            <input type="text" id="fname" required>
+            <label for="sname">Second name</label>
+            <input type="text" id="sname" required>
+            <label for="email">email</label>
+            <input type="email" id="email" required>
+            <label for="phone_number">Phone number</label>
+            <input type="text" id="phone_number" required>
+            <label for="country">Country</label>
+            <select name="country" id="country" required>
+                <option value="bulgaria">Bulgaria</option>
+                <option value="mexico">Mexico</option>
+                <option value="japan">Japan</option>
+                <option onclick="formValidation()" value="other">Other</option>
+            </select>
+            <label id="additional_country_label"for="additional_country">Specify country</label>
+            <input type="text" id="additional_country" required>
+            <input id="submit" type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script type="text/javascript" src="js/task10.js"></script>
+
+</body>
+</html>

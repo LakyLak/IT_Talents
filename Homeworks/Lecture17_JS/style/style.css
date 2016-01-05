@@ -1,0 +1,26 @@
+#zoom img {
+    width: 100px;
+    height: 150px;
+    float: left;
+    padding: 20px;
+}
+#registration_form {
+    width: 300px;
+}
+#registration_form label {
+    float: left;
+    width: 120px;
+}
+#registration_form input, #registration_form select {
+    float: right;
+    width: 150px;
+}
+#additional_country_label, #additional_country {
+    float: left;
+    visibility: hidden;
+    display: none;
+}
+#registration_form #submit {
+    margin: 20px;
+    float: right;
+}

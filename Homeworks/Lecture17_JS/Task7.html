@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+
+    <div id="convert">
+        Convert
+        <input id="convert_input" type="text">
+        <select name="" id="from">
+            <option selected="selected" value="kg">kg</option>
+            <option value="lb">lb</option>
+        </select>
+        <select name="" id="to">
+            <option value="kg">kg</option>
+            <option selected="selected" value="lb">lb</option>
+        </select>
+        <button onclick="calculateConversion()">Convert</button>
+        <button onclick="switchUnits()">Switch</button>
+        <p id="result_convert"></p>
+    </div>
+
+    <script type="text/javascript" src="js/task7.js"></script>
+
+</body>
+</html>
