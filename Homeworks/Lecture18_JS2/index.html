@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tank</title>
+    <!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
+    <style type="text/css">
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #806e3e;
+            /*overflow: hidden;*/
+        }
+
+        #terain {
+
+
+            /*z-index: 1;*/
+        }
+
+        #tank{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: url(images/tank.png) no-repeat;
+            width: 127px;
+            height: 127px;
+            margin: 0;
+            /*z-index: 2;*/
+        }
+    </style>
+    <script type="text/javascript" src="js/tank.js"></script>
+</head>
+<body>
+    <button onclick="MoveRight()">RIGHT</button>
+    <div id="terain"></div>
+    <div id="tank"></div>
+</body>
+<script>
+    var tank = document.getElementById('tank');
+    var tankBottom = 0;
+    var tankLeft = 0;
+    var step = 2;
+    var orientation = null;
+    document.addEventListener('keydown', Move, false);
+
+    function Move(ev) {
+        switch (ev.keyCode) {
+            case 38:
+                orientation = 'rotate(0deg)';
+                tankBottom += step;
+                break;
+            case 40:
+                orientation = 'rotate(180deg)';
+                tankBottom -= step;
+                break;
+            case 37:
+                orientation = 'rotate(270deg)';
+                tankLeft -= step;
+                break;
+            case 39:
+                orientation = 'rotate(90deg)';
+                tankLeft += step;
+                break;
+            default:
+                break;
+        }
+        tank.style.transform = orientation;
+        tank.style.transition = 'transform 0.5s';
+        tank.style.bottom = tankBottom + 'px';
+        tank.style.left = tankLeft + 'px';
+    }
+</script>
+</html>
