@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>People List</title>
+	<script type="text/javascript" src="Ajax.js"></script>
+	<style>
+		#peopleList {
+			width: 300px;
+			float: left;
+		}
+		#ulList li {
+			list-style-type: none;
+			margin: 5px;
+		}
+		
+		#personDetails {
+			float: left;
+			width: 350px;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="peopleList">
+		<ul id="ulList">
+			<li onclick="showData(0)"></li>
+			<li onclick="showData(1)"></li>
+			<li onclick="showData(2)"></li>
+			<li onclick="showData(3)"></li>
+			<li onclick="showData(4)"></li>
+			<li onclick="showData(5)"></li>
+			<li onclick="showData(6)"></li>
+			<li onclick="showData(7)"></li>
+			<li onclick="showData(8)"></li>
+			<li onclick="showData(9)"></li>
+		</ul>
+	</div>
+	<div id="personDetails">
+		<div id="detailImage"></div>
+		<p id="detailName"></p>
+		<p id="detailOccupation"></p>
+		<p id="detailBirthday"></p>
+		<p id="detailGender"></p>
+	</div>
+	
+	<script type="text/javascript" >
+	
+	window.onload = function populateList(){
+		Ajax.makeRequest('GET', 'people.php', {}, true, fillTheList);
+	}
+	
+	var li = document.getElementById('ulList').getElementsByTagName('li');
+	
+	function fillTheList(xhr) { 
+		var people = JSON.parse(xhr.responseText);
+		for (var i = 0; i < people.length; i++) {
+			li[i].innerHTML = "<img src='" + people[i].image +"' width='50'>" + ' ' + people[i].name;
+		}
+	}
+	
+	var detail_image = document.getElementById('detailImage'); 
+	var detail_name = document.getElementById('detailName');
+	var detail_occupation = document.getElementById('detailOccupation');
+	var detail_birthday = document.getElementById('detailBirthday');
+	var detail_gender = document.getElementById('detailGender');
+	
+	function showData(element) {
+		var params = {selected: element};
+		Ajax.makeRequest('POST', 'people.php', params, true, show);
+		
+	}
+	
+	function show(xhr) {
+		var people = JSON.parse(xhr.responseText);
+		detail_image.innerHTML = "<img src='" + people.image +"' width='300'>";
+		detail_name.innerHTML = people.name;
+		detailOccupation.innerHTML = people.occupation;
+		detailBirthday.innerHTML = people.birthDate;
+		detailGender.innerHTML = people.gender;
+	}
+	
+	</script>
+	
+</body>
+</html>
